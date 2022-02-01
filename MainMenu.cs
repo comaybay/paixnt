@@ -72,10 +72,8 @@ namespace Paixnt
         {
             if (!isLoggedIn)
             {
-                OpenLoginDiaglog();
-
-                if (!isLoggedIn)
-                    return;
+				new Paixnt().Show();
+                return;
             }
 
             string painxtId = BitConverter.ToString(Guid.NewGuid().ToByteArray()).Replace("-", "");
